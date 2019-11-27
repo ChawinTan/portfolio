@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import AppDrawer from './Components/Drawer';
 import './App.css';
 
 const useStyles = makeStyles(theme => ({
@@ -31,7 +32,7 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{backgroundColor: '#ffa500'}} >
+      <AppBar position="static" style={{backgroundColor: '#ffa500'}}>
         <Toolbar>
           <IconButton edge="start" color="inherit" className={classes.menuButton} aria-label="menu">
             <MenuIcon />
@@ -41,6 +42,8 @@ function App() {
           </Typography>
         </Toolbar>
       </AppBar>
+
+      <AppDrawer open={true} />
     </div>
   );
 }
