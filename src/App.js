@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Switch, Route } from "react-router-dom";
 import AppBar from '@material-ui/core/AppBar';
@@ -30,12 +30,27 @@ const useStyles = makeStyles(theme => ({
 function App() {
   const classes = useStyles();
 
+  const [drawer, setDrawer] = useState(false);
+
+  const handleOpenDrawer = () => {
+    setDrawer(true);
+  }
+
+  const handleCloseDrawer = () => {
+    setDrawer(false);
+  }
+
   return (
     <div className={classes.root}>
       <AppBar position="static" style={{backgroundColor: '#ffa500'}}>
         <Toolbar>
-          <IconButton edge="start" color="inherit" className={classes.menuButton} aria-label="menu">
-            <MenuIcon />
+          <IconButton 
+            edge="start" 
+            color="inherit" 
+            className={classes.menuButton} 
+            aria-label="menu"
+            onClick={handleOpenDrawer}>
+            <MenuIcon  />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             Welcome!
@@ -43,7 +58,9 @@ function App() {
         </Toolbar>
       </AppBar>
 
-      <AppDrawer open={true} />
+      <AppDrawer 
+        open={drawer}
+        onClose={handleCloseDrawer} />
     </div>
   );
 }

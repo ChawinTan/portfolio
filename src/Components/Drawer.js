@@ -3,8 +3,11 @@ import Drawer from '@material-ui/core/Drawer';
 
 
 function AppDrawer(props) {
+    const { open, onClose } = props;
     return (
-        <Drawer open={props.open}>
+        <Drawer 
+            open={open}
+            onClose={onClose} >
             Hello
         </Drawer>
     );
