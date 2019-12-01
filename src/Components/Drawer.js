@@ -13,6 +13,7 @@ import NoteIcon from '@material-ui/icons/Note';
 import CreateIcon from '@material-ui/icons/Create';
 import ContactsIcon from '@material-ui/icons/Contacts';
 import { makeStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
     list: {
@@ -112,5 +113,10 @@ function AppDrawer(props) {
         </div>
     );
 }
+
+AppDrawer.propTypes = {
+    open: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired
+};
 
 export default AppDrawer;
