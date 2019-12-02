@@ -1,9 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const styles = {
+  container: {
+    textAlign: "center",
+    position: "absolute",
+    left: "50%",
+    top: "50%",
+    webkitTransform: "translate(-50%, -50%)",
+    transform: "translate(-50%, -50%)"
+  },
+  about: {
+    fontFamily: "Comic Sans MS",
+    color: "rgba(51, 51, 51, 0.7)"
+  },
   intervals: {
     color: "#ffa500",
-    fontFamily: "Comic Sans MS",
     fontStyle: "italic",
     fontWeight: 500
   }
@@ -43,12 +54,12 @@ function Home() {
   }, 1500);
 
   return (
-    <div>
-      <div>
+    <div style={styles.container}>
+      <div style={styles.about}>
         Hi! My name is Chawin and I am a{" "}
         <span style={styles.intervals}>{personality[position]}</span>
       </div>
-      <div>I build things on the internet</div>
+      <div style={styles.about}>I build things on the internet</div>
     </div>
   );
 }

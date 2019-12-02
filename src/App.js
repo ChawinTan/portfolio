@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
-    paddingLeft: "40%",
+    textAlign: "center",
     letterSpacing: 3,
     fontFamily: "Comic Sans MS",
     fontWeight: 500
