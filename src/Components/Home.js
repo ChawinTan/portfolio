@@ -74,11 +74,24 @@ function Home() {
   const classes = useStyles();
   const personality = ["Developer", "Violinist", "Fisherman"];
   const icons = [
-    <LinkedInIcon fontSize="large" className={classes.linkedin} />,
-    <GitHubIcon fontSize="large" className={classes.github} />,
-    <YouTubeIcon fontSize="large" className={classes.youtube} />,
-    <FacebookIcon fontSize="large" className={classes.facebook} />,
-    <InstagramIcon fontSize="large" />
+    <a href="https://www.linkedin.com/in/chawintan/" target="_blank">
+      <LinkedInIcon fontSize="large" className={classes.linkedin} />
+    </a>,
+    <a href="https://github.com/ChawinTan" target="_blank">
+      <GitHubIcon fontSize="large" className={classes.github} />
+    </a>,
+    <a
+      href="https://www.youtube.com/channel/UCi8es9-zdylDTY3xJruzqLg?view_as=subscriber"
+      target="_blank"
+    >
+      <YouTubeIcon fontSize="large" className={classes.youtube} />
+    </a>,
+    <a href="https://www.facebook.com/boring.square.73" target="_blank">
+      <FacebookIcon fontSize="large" className={classes.facebook} />
+    </a>,
+    <a href="https://www.instagram.com/boaringsquare/" target="_blank">
+      <InstagramIcon fontSize="large" />
+    </a>
   ];
   let [position, setPosition] = useState(0);
 
