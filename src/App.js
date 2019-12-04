@@ -9,6 +9,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 import AppDrawer from "./Components/Drawer";
 import Home from "./Components/Home";
+import About from "./Components/About";
 import "./App.css";
 
 const useStyles = makeStyles(theme => ({
@@ -60,7 +61,11 @@ function App() {
       </AppBar>
 
       <AppDrawer open={drawer} onClose={handleCloseDrawer} />
-      <Home />
+
+      <Switch>
+        <Route exact path={"/"} component={Home} />
+        <Route path={"/about"} component={About} />
+      </Switch>
     </div>
   );
 }
