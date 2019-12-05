@@ -57,7 +57,7 @@ function AppDrawer(props) {
       />
     </ListItem>,
 
-    <ListItem key={2}>
+    <ListItem key={2} button component={Link} to="/resume">
       <ListItemIcon className={classes.listItemIcon}>
         <NoteIcon />
       </ListItemIcon>
@@ -68,7 +68,7 @@ function AppDrawer(props) {
       />
     </ListItem>,
 
-    <ListItem key={3}>
+    <ListItem key={3} button component={Link} to="/portfolio">
       <ListItemIcon className={classes.listItemIcon}>
         <CreateIcon />
       </ListItemIcon>
@@ -79,7 +79,7 @@ function AppDrawer(props) {
       />
     </ListItem>,
 
-    <ListItem key={4}>
+    <ListItem key={4} button component={Link} to="/contact">
       <ListItemIcon className={classes.listItemIcon}>
         <ContactsIcon />
       </ListItemIcon>

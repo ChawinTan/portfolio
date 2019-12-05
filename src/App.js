@@ -10,6 +10,9 @@ import MenuIcon from "@material-ui/icons/Menu";
 import AppDrawer from "./Components/Drawer";
 import Home from "./Components/Home";
 import About from "./Components/About";
+import Resume from "./Components/Resume";
+import Portfolio from "./Components/Portfolio";
+import Contact from "./Components/Contact";
 import "./App.css";
 
 const useStyles = makeStyles(theme => ({
@@ -65,6 +68,9 @@ function App() {
       <Switch>
         <Route exact path={"/"} component={Home} />
         <Route path={"/about"} component={About} />
+        <Route path={"/resume"} component={Resume} />
+        <Route path={"/portfolio"} component={Portfolio} />
+        <Route path={"/contact"} component={Contact} />
       </Switch>
     </div>
   );
