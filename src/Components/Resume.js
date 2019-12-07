@@ -58,7 +58,7 @@ function Resume() {
   const skills = [
     {
       category: "Programming Languages",
-      items: ["JavaScript, TypeScript", "Python", "Java", "Go (basic)", "SQL"]
+      items: ["JavaScript", "TypeScript", "Python", "Java", "Go (basic)", "SQL"]
     },
     {
       category: "Front End Frameworks/Libraries",
