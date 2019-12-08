@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
 const styles = {
   root: {
     fontFamily: "Comic Sans MS",
-    margin: "30px"
+    marginTop: "30px"
   },
   name: {
     fontSize: "1.5rem",
