@@ -12,6 +12,7 @@ import BuildIcon from "@material-ui/icons/Build";
 import { makeStyles } from "@material-ui/core/styles";
 
 import TwilioVideo from "../Assets/Twilio_video.JPG";
+import TwilioPay from "../Assets/Twilio_Pay.JPG";
 
 const useStyles = makeStyles(theme => ({
   buildIcon: {
@@ -34,7 +35,18 @@ const useStyles = makeStyles(theme => ({
 function Portfolio() {
   const classes = useStyles();
   const imageLinks = [
-    { link: TwilioVideo, alt: "Twilio Video Kyc", title: "Twilio Video Kyc" }
+    {
+      link: TwilioVideo,
+      alt: "Twilio Video Kyc",
+      title: "Twilio Video Kyc",
+      url: "https://video-view.tanhangchawin.now.sh/"
+    },
+    {
+      link: TwilioPay,
+      alt: "Twilio Pay Shop",
+      title: "Owl Pay",
+      url: "https://twilio-pay-shop.tanhangchawin.now.sh/"
+    }
   ];
 
   return (
@@ -78,7 +90,7 @@ function Portfolio() {
                       <Link
                         disableTypography
                         className={classes.link}
-                        href="https://video-view.tanhangchawin.now.sh/"
+                        href={link.url}
                       >
                         View
                       </Link>
